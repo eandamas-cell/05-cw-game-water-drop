@@ -1,25 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Drop Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DROP ZONE | charity: water</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-wrapper">
-        <h1 class="game-title">Water Drop</h1>
-        <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
-        <div class="score-panel">
-            <div class="score">Score: <span id="score">0</span></div>
-            <div class="timer">Time: <span id="time">30</span>s</div>
-            <button id="start-btn">Start Game</button>
-        </div>
-        
-        <div id="game-container">
-        </div>
+
+  <main class="game-wrapper">
+    <header class="game-header">
+      <div class="brand"><span class="brand-icon">💧</span> charity: water inspired</div>
+      <h1>DROP <span>ZONE</span></h1>
+      <p>Catch clean water. Avoid pollution. Make every drop count.</p>
+    </header>
+
+    <section class="score-panel">
+      <div class="stat">
+        <span class="stat-label">SCORE</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat">
+        <span class="stat-label">TIME LEFT</span>
+        <strong><span id="time">30</span>s</strong>
+      </div>
+
+      <div class="stat">
+        <span class="stat-label">GOAL</span>
+        <strong>100</strong>
+      </div>
+    </section>
+
+    <div class="progress-wrapper">
+      <div class="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text">Collect 100 points to win!</p>
     </div>
-    
-    <script src="script.js"></script>
+
+    <section id="game-container" aria-label="Water drop game area">
+      <div id="game-message" class="game-message">
+        <div class="message-icon">💧</div>
+        <h2>Ready to make a splash?</h2>
+        <p>Collect blue drops and avoid polluted drops before time runs out.</p>
+        <button id="start-btn">START GAME</button>
+      </div>
+    </section>
+
+    <div class="game-controls">
+      <div class="legend">
+        <span>💧 Clean water <b>+10</b></span>
+        <span>🟤 Polluted water <b>-5</b></span>
+      </div>
+      <button id="reset-btn">↻ RESET GAME</button>
+    </div>
+
+    <footer>
+      <p>Every drop counts.</p>
+      <p>Inspired by the mission of <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">charity: water</a>.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
